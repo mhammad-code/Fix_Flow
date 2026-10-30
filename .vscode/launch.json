@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run FixFlow in Edge",
+      "type": "pwa-msedge",
+      "request": "launch",
+      "url": "http://127.0.0.1:5501/index.html",
+      "webRoot": "${workspaceFolder}",
+      "preLaunchTask": "Start FixFlow local server"
+    }
+  ]
+}

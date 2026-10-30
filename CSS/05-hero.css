@@ -1,0 +1,90 @@
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  padding: 110px 0 150px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.65), transparent 45%),
+    radial-gradient(circle at 88% 85%, rgba(249, 115, 22, 0.40), transparent 42%),
+    linear-gradient(135deg, var(--navy), var(--navy-2));
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: -140px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;               
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 3.2rem;
+  line-height: 1.15;
+  animation: fadeUp 1s ease;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  animation: fadeUp 1.3s ease;
+}
+
+.hero .urdu {
+  color: #fed7aa;
+  font-size: 1.2rem;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #fdba74, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  fill: var(--bg);          
+}
+
+ 
+.hero-image-wrap {
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.hero-image-wrap:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 32px 70px rgba(37, 99, 235, 0.4);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}

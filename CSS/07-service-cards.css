@@ -1,0 +1,146 @@
+
+.service-card {
+  background: var(--card-bg);
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  height: 100%;
+  transition: transform var(--speed), box-shadow var(--speed);
+}
+
+.service-card:hover {
+  transform: translateY(-8px);           
+  box-shadow: var(--shadow-hover);
+}
+
+ 
+.card-img-wrap {
+  overflow: hidden;
+  height: 190px;
+}
+
+.card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.service-card:hover .card-img-wrap img {
+  transform: scale(1.1);                 
+}
+
+.service-card .price {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+ 
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  border-radius: 50%;
+  background: #dbeafe;
+  color: var(--primary);
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 0 auto 15px;
+  transition: background-color var(--speed), color var(--speed);
+}
+
+.service-card:hover .icon-circle {
+  background: var(--primary);
+  color: #fff;
+}
+
+ 
+.filter-btn {
+  border: 2px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  border-radius: 50px;
+  padding: 6px 20px;
+  margin: 4px;
+  transition: background-color var(--speed), color var(--speed);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+
+
+
+
+
+
+.photo-card {
+  position: relative;
+  display: block;
+  height: 260px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--navy-2), var(--primary));
+  box-shadow: var(--shadow);
+}
+
+.photo-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+ 
+.photo-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 31, 77, 0.9), rgba(11, 31, 77, 0.1) 60%);
+}
+
+.photo-card .badge-icon {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+.photo-card .info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: 18px;
+  color: #fff;
+}
+
+.photo-card .info h5 { color: #fff; margin: 0 0 2px; }
+.photo-card .info .price { color: #fdba74; margin: 0; font-weight: 600; }
+
+.photo-card:hover img { transform: scale(1.1); }
+.photo-card.tilt:hover { box-shadow: var(--shadow-hover); }
+
+
+ 
+.photo-card .desc {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  margin: 0 0 4px;
+}

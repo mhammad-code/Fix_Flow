@@ -1,0 +1,47 @@
+
+.btn-fix {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 28px;
+  font-weight: 500;
+  transition: background-color var(--speed), transform 0.2s;
+}
+
+.btn-fix:hover {
+  background-color: var(--accent);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+ 
+.btn-fix-outline {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  padding: 8px 26px;
+  transition: background-color var(--speed), color var(--speed);
+}
+
+.btn-fix-outline:hover {
+  background: #fff;
+  color: var(--primary);
+}
+
+
+ 
+.btn-fix-outline-dark {
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 50px;
+  padding: 5px 20px;
+  transition: background-color var(--speed), color var(--speed);
+}
+
+.btn-fix-outline-dark:hover {
+  background: var(--primary);
+  color: #fff;
+}

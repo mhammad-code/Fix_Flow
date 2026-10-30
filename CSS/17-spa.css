@@ -1,0 +1,24 @@
+#app {
+  min-height: 60vh;
+}
+
+.view-enter {
+  animation: fadeUp 0.5s ease;
+}
+
+.view-loader {
+  display: flex;
+  justify-content: center;
+  padding: 120px 0;
+}
+
+.not-found {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.not-found h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--primary);
+}

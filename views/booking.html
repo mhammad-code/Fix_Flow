@@ -1,0 +1,143 @@
+ 
+
+<header class="page-header">
+  <div class="container">
+    <h1>Book a Service</h1>
+    <p class="mb-0">Fill in the form below. It takes about two minutes.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+
+       
+      <div class="col-lg-8 d-none" id="bookingAuthRequired">
+        <div class="form-card text-center py-5">
+          <div class="icon-circle mb-3" style="width: 80px; height: 80px; line-height: 80px; font-size: 2.2rem;">
+            <i class="bi bi-shield-lock-fill"></i>
+          </div>
+          <h3 class="fw-bold mb-2">Login Required to Book a Service</h3>
+          <p class="text-muted mx-auto mb-4" style="max-width: 520px;">
+            You can freely browse and explore all our services! To assign an expert technician to your doorstep, please login or register so we can confirm your address and track your service warranty.
+          </p>
+          <div class="d-flex flex-wrap justify-content-center gap-3">
+            <a href="#/login?redirect=booking" id="loginToBookBtn" class="btn btn-fix btn-lg px-4">
+              <i class="bi bi-box-arrow-in-right me-1"></i> Login to Book Service
+            </a>
+            <a href="#/services" class="btn btn-fix-outline-dark btn-lg px-4">
+              <i class="bi bi-compass me-1"></i> Continue Exploring
+            </a>
+          </div>
+          <div class="mt-4 pt-3 border-top text-muted small">
+            <i class="bi bi-check2-circle text-success me-1"></i> Quick 30-Second Signup &bull; Cash/Online Payment After Work &bull; Free Warranty
+          </div>
+        </div>
+      </div>
+
+       
+      <div class="col-lg-8" id="formCardWrap">
+        <div class="form-card" id="formCard">
+          <div class="alert alert-info py-2 px-3 d-flex align-items-center justify-content-between mb-4" id="bookingUserAlert">
+            <div class="d-flex align-items-center gap-2">
+              <i class="bi bi-person-check-fill text-primary"></i>
+              <span>Booking as: <strong id="loggedInUserLabel">User</strong></span>
+            </div>
+            <a href="#/dashboard" class="small text-decoration-none fw-semibold">My Bookings &rarr;</a>
+          </div>
+
+          <form id="bookingForm" novalidate>
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold" for="name">Full name</label>
+                <input id="name" class="form-control" placeholder="e.g. Ahmed Raza">
+                <div class="error-msg" id="err-name"></div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold" for="phone">Mobile number</label>
+                <input id="phone" class="form-control" placeholder="0300-1234567" inputmode="tel">
+                <div class="error-msg" id="err-phone"></div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold" for="city">City</label>
+                <select id="city" class="form-select"></select>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold" for="area">Area</label>
+                <select id="area" class="form-select"></select>
+                <div class="error-msg" id="err-area"></div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-semibold" for="address">Full address</label>
+                <textarea id="address" class="form-control" rows="2" placeholder="House no, street, nearby landmark"></textarea>
+                <div class="error-msg" id="err-address"></div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold" for="service">Service</label>
+                <select id="service" class="form-select"></select>
+                <div class="error-msg" id="err-service"></div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label fw-semibold" for="date">Date</label>
+                <input id="date" type="date" class="form-control">
+                <div class="error-msg" id="err-date"></div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-semibold" for="time">Time slot</label>
+                <select id="time" class="form-select">
+                  <option value="">Choose a time slot</option>
+                  <option>Morning (9 AM - 12 PM)</option>
+                  <option>Afternoon (12 PM - 4 PM)</option>
+                  <option>Evening (4 PM - 8 PM)</option>
+                  <option>Friday after Jumu'ah</option>
+                </select>
+                <div class="error-msg" id="err-time"></div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-semibold d-block">Payment (after the job)</label>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="payment" id="pay1" value="Cash on Service" checked><label class="form-check-label" for="pay1">Cash</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="payment" id="pay2" value="JazzCash"><label class="form-check-label" for="pay2">JazzCash</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="payment" id="pay3" value="Easypaisa"><label class="form-check-label" for="pay3">Easypaisa</label></div>
+              </div>
+
+              <div class="col-12">
+                <label class="form-label fw-semibold" for="notes">Notes (optional)</label>
+                <textarea id="notes" class="form-control" rows="2" placeholder="Describe the problem"></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-fix btn-lg w-100 mt-4">Confirm Booking</button>
+          </form>
+        </div>
+
+         
+        <div class="form-card success-box d-none" id="successBox">
+          <i class="bi bi-check-circle-fill success-icon"></i>
+          <h3 class="mt-2">Booking received!</h3>
+          <p class="text-muted mb-1">Your booking ID is <strong id="bookingId"></strong></p>
+          <p class="text-muted" id="bookingSummary"></p>
+          <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+            <a href="#/dashboard" class="btn btn-fix">View My Bookings</a>
+            <button type="button" class="btn btn-fix-outline-dark" id="bookAnother">Book Another</button>
+          </div>
+        </div>
+      </div>
+
+       
+      <div class="col-lg-4">
+        <div class="trust-box d-flex gap-3 mb-3"><i class="bi bi-patch-check-fill"></i><div><h6 class="mb-1">Verified technician</h6><p class="mb-0 text-muted small">Skilled and background-checked.</p></div></div>
+        <div class="trust-box d-flex gap-3 mb-3"><i class="bi bi-cash-coin"></i><div><h6 class="mb-1">Pay after the job</h6><p class="mb-0 text-muted small">Cash, JazzCash or Easypaisa.</p></div></div>
+        <div class="trust-box d-flex gap-3"><i class="bi bi-whatsapp"></i><div><h6 class="mb-1">WhatsApp updates</h6><p class="mb-0 text-muted small">We confirm your booking by message.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>

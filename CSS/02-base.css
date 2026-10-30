@@ -1,0 +1,60 @@
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+#app {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+ 
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  transition: color var(--speed);
+}
+
+img {
+  max-width: 100%;    
+  height: auto;
+}
+
+
+
+
+ 
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: var(--text);
+}
+
+ 
+.urdu {
+  font-family: var(--font-urdu);
+  direction: rtl;           
+  line-height: 2;
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+
+ 
+h1, h2 {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}

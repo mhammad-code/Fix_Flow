@@ -1,0 +1,50 @@
+
+
+<header class="page-header">
+  <div class="container">
+    <h1>My Bookings</h1>
+    <p class="mb-0">Track your service requests in one place.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+
+    <div class="row g-3 mb-4">
+      <div class="col-6 col-md-3"><div class="stat-box"><h3 id="statTotal">0</h3><p>Total Bookings</p></div></div>
+      <div class="col-6 col-md-3"><div class="stat-box"><h3 id="statActive">0</h3><p>Active</p></div></div>
+      <div class="col-6 col-md-3"><div class="stat-box"><h3 id="statDone">0</h3><p>Completed</p></div></div>
+      <div class="col-6 col-md-3"><div class="stat-box"><h3 id="statCancel">0</h3><p>Cancelled</p></div></div>
+    </div>
+
+     
+    <div id="dashFilters" class="text-center mb-4"></div>
+
+     
+    <div class="table-card table-responsive">
+      <table class="table table-hover align-middle mb-0">
+        <thead>
+          <tr><th>ID</th><th>Service</th><th>Date &amp; Time</th><th>Location</th><th>Payment</th><th>Status</th><th>Action</th></tr>
+        </thead>
+        <tbody id="bookingRows"></tbody>
+      </table>
+    </div>
+
+     
+    <div id="dashGuestNotice" class="alert alert-info d-flex align-items-center justify-content-between mb-4 d-none">
+      <div class="d-flex align-items-center gap-2">
+        <i class="bi bi-info-circle-fill fs-5 text-primary"></i>
+        <span>Viewing as guest. Sign in to your account to manage your personal bookings.</span>
+      </div>
+      <a href="#/login" class="btn btn-sm btn-primary rounded-pill px-3">Login Now</a>
+    </div>
+
+    <div id="emptyState" class="empty-state d-none">
+      <i class="bi bi-calendar2-x"></i>
+      <h4>No bookings here yet</h4>
+      <p class="text-muted">Book a service and it will appear in this list.</p>
+      <a href="#/booking" class="btn btn-fix">Book a Service</a>
+      <button type="button" class="btn btn-fix-outline-dark" id="loadDemo">Load demo bookings</button>
+    </div>
+  </div>
+</section>

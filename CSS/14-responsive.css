@@ -1,0 +1,68 @@
+
+@media (max-width: 991px) {
+  .hero {
+    padding: 70px 0 100px;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero .d-flex.flex-wrap {
+    justify-content: center;
+  }
+
+  .navbar-nav {
+    padding: 12px 0;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 8px 12px;
+  }
+
+  .footer {
+    padding: 50px 0 20px;
+  }
+}
+
+ 
+@media (max-width: 576px) {
+  .hero {
+    padding: 55px 0 90px;
+  }
+
+  .hero h1 {
+    font-size: 1.85rem;
+  }
+
+  .hero p {
+    font-size: 0.98rem;
+  }
+
+  .section {
+    padding: 45px 0;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .form-card {
+    padding: 20px 16px;
+  }
+
+  .whatsapp-btn {
+    width: 52px;
+    height: 52px;
+    font-size: 1.6rem;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+}

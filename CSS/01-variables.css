@@ -1,0 +1,28 @@
+
+:root {
+   
+  --primary: #2563eb;         
+  --primary-dark: #1d4ed8;    
+  --navy: #0b1f4d;            
+  --navy-2: #1e3a8a;          
+  --accent: #f97316;          
+  --success: #16a34a;         
+  --warning: #eab308;         
+  --danger: #dc2626;          
+  --bg: #f8fafc;              
+  --card-bg: #ffffff;         
+  --text: #1e293b;            
+  --text-muted: #64748b;      
+
+   
+  --font-main: "Poppins", sans-serif;
+  --font-urdu: "Noto Nastaliq Urdu", serif;
+
+   
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 12px 25px rgba(0, 0, 0, 0.15);
+
+   
+  --speed: 0.3s;
+}
